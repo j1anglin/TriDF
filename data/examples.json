@@ -1,0 +1,32 @@
+[
+  {
+    "id": "EX-001",
+    "image": "static/images/interpolate_start.jpg",
+    "input": "Text: Describe the scene and identify the sound.",
+    "output": "A person speaks while a train passes in the background.",
+    "gt": "Person speaking on a platform with ambient train noise.",
+    "tags": ["audio", "captioning"]
+  },
+  {
+    "id": "EX-002",
+    "image": "static/images/interpolate_end.jpg",
+    "input": "Image QA: What object is interacting with the dog?",
+    "output": "The person is throwing a frisbee.",
+    "tags": ["vision", "qa"]
+  },
+  {
+    "id": "EX-003",
+    "image": "static/images/interpolate_start.jpg",
+    "input": "Retrieval: Pick the best caption for the image.",
+    "output": "A chef slices vegetables in a kitchen.",
+    "gt": "A chef slices vegetables in a kitchen.",
+    "tags": ["retrieval", "text+image"]
+  },
+  {
+    "id": "EX-004",
+    "image": "static/images/interpolate_end.jpg",
+    "input": "Summarize the scene from transcript and frame.",
+    "output": "Someone pours coffee into a mug on a counter.",
+    "tags": ["summarization", "text"]
+  }
+]
