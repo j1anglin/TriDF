@@ -10,12 +10,14 @@
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/index.css?v=20260208">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -111,12 +113,13 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/j1anglin/TriDF"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-light is-disabled"
+                   aria-disabled="true">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Dataset</span>
+                  <span>Dataset (Coming soon)</span>
                 </a>
               </span>
               <span class="link-block">
@@ -172,18 +175,22 @@
                   </div>
 	                  <div class="column is-6">
 	                    <div class="content figure-text">
-	                      <h3 class="title is-3">Overview of TriDF.</h3>
+	                      <h3 class="title is-3 section-title">Overview of TriDF</h3>
+	                      <hr class="section-title-rule" aria-hidden="true">
 	                      <p class="figure-caption">
-	                        We propose TriDF, a comprehensive benchmark tailored to interpretable DeepFake detection, evaluating models through the coupled lenses of Perception, Detection, and Hallucination.
+	                        <strong>(a) Data generation:</strong> 
+                          <br>
+                          Construct ~5K high-quality samples using 16 DeepFake techniques across image, video, and audio modalities.
 	                      </p>
 	                      <p class="figure-caption">
-	                        <strong>(a) Data generation:</strong> construct ~5K high-quality DeepFake samples using 16 DeepFake techniques across image, video, and audio modalities.
+	                        <strong>(b) Fine-grained artifact taxonomy:</strong> 
+                          <br>
+                          A hierarchical taxonomy of fine-grained artifacts decomposes detection into specific artifact analyses.
 	                      </p>
 	                      <p class="figure-caption">
-	                        <strong>(b) Fine-grained artifact taxonomy:</strong> design a comprehensive and hierarchical taxonomy of fine-grained artifacts to decompose perception, detection, and hallucination tendency into artifact-wise analyses.
-	                      </p>
-	                      <p class="figure-caption">
-	                        <strong>(c) Evaluation</strong> benchmark models on (i) Perception (spot artifacts), (ii) Detection (real vs. fake), and (iii) Hallucination (unsupported explanations), and report dataset/model statistics and MLLM evaluation results.
+	                        <strong>(c) Evaluation: </strong> 
+                          <br>
+                          benchmark models on three pillars: Perception (spotting artifacts), Detection (real vs. fake), and Hallucination (explanation reliability).
 	                      </p>
 	                    </div>
 	                  </div>
@@ -197,46 +204,14 @@
   </div>
 </section>
 
-<section class="section" id="pipeline">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="pipeline-align">
-          <h2 class="title is-3">Pipeline</h2>
-
-          <div class="publication-banner pipeline-figure-wrap">
-            <img src="./static/images/pipeline.png" alt="Pipeline of TriDF" class="pipeline-figure">
-          </div>
-
-          <!-- (a) -->
-          <p class="pipeline-caption">
-            <strong>(a) Generation &amp; Annotation:</strong>
-            We first collect open-source human-related datasets across three modalities. We generate
-            real-fake data pairs using 16 DeepFake (DF) techniques and perform quality control by
-            authenticity and consistency metrics to obtain high-quality data. We then construct quality
-            and semantic artifact questions and perform human annotation, resulting in reliable ground truth.
-          </p>
-
-          <!-- (b) -->
-          <p class="pipeline-caption">
-            <strong>(b) Evaluation:</strong>
-            We design three types of questions, e.g., True-False, Multiple-Choice, and Open-Ended.
-            These questions are combined with high-quality data and fed into MLLMs for evaluation, where
-            the model responses are then assessed using our proposed metrics to evaluate their perception
-            ability, interpretable detection performance, and tendencies towards hallucination.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="pipeline-align">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3 section-title">Abstract</h2>
+          <hr class="section-title-rule" aria-hidden="true">
           <div class="content has-text-justified">
             <p>
               Advances in generative modeling have made it increasingly easy to fabricate realistic portrayals
@@ -264,12 +239,49 @@
   </div>
 </section>
 
+<section class="section" id="pipeline">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline-align">
+          <h2 class="title is-3 section-title">Pipeline</h2>
+          <hr class="section-title-rule" aria-hidden="true">
+
+          <div class="publication-banner pipeline-figure-wrap">
+            <img src="./static/images/pipeline.png" alt="Pipeline of TriDF" class="pipeline-figure">
+          </div>
+
+          <!-- (a) -->
+          <p class="pipeline-caption">
+            <strong>(a) Generation &amp; Annotation:</strong>
+            We first collect open-source human-related datasets across three modalities. We generate
+            real-fake data pairs using 16 DeepFake techniques and perform quality control by
+            authenticity and consistency metrics to obtain high-quality data. We then construct quality
+            and semantic artifact questions and perform human annotation, resulting in reliable ground truth.
+          </p>
+
+          <!-- (b) -->
+          <p class="pipeline-caption">
+            <strong>(b) Evaluation:</strong>
+            We design three types of questions, e.g., True-False, Multiple-Choice, and Open-Ended.
+            These questions are combined with high-quality data and fed into MLLMs for evaluation, where
+            the model responses are then assessed using our proposed metrics to evaluate their perception
+            ability, interpretable detection performance, and tendencies towards hallucination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="section" id="findings">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="pipeline-align">
-          <h2 class="title is-3">Findings</h2>
+          <h2 class="title is-3 section-title">Findings</h2>
+          <hr class="section-title-rule" aria-hidden="true">
           <div class="content has-text-justified">
             <p>
               On TriDF, we benchmark 26 MLLMs (23 open-source; 3 proprietary) zero-shot on image, video,
@@ -295,97 +307,126 @@
                 representations/mechanisms.
               </li>
             </ul>
-	          </div>
-	          <h3 class="title is-3">Benchmark</h3>
-	          <div class="content has-text-justified">
-	            <p>
-	              As shown in Tab. 1, we compare our proposed TriDF with existing benchmarks for DeepFake detection across several key dimensions.
-	              Symbols denote: &spades; Accuracy (e.g., F1-score, AUC), &hearts; Similarity-based (e.g., ROUGE-L, CSS), &diams; LLM-as-a-judge (e.g., GPTScore), and &clubs; <em>Cover</em>.
-	            </p>
-	          </div>
-	          <div class="figure-stack">
-	            <div class="figure-block">
-	              <div class="columns figure-row">
-	                <div class="column">
-		                  <figure class="image">
-		                    <img src="./static/images/comparision.png" alt="TriDF comparison figure" class="paper-figure">
-		                  </figure>
-		                  <p class="has-text-centered is-size-7 figure-caption">Comparison with related settings.</p>
-		                  <div class="content has-text-justified">
-		                    <p>
-		                      \cref{fig:template_bench} outlines prompt templates designed for benchmark construction across three distinct question formats:
-		                      <code>&lt;TFQ&gt;</code>, <code>&lt;MCQ&gt;</code>, and <code>&lt;OEQ&gt;</code>. The <code>&lt;TFQ&gt;</code> (True-False Question)
-		                      section provides templates to verify the observation of specific artifacts, their presence in the background, or their existence in
-		                      specific locations. The <code>&lt;MCQ&gt;</code> (Multiple-Choice Question) templates ask users to identify present artifacts or their
-		                      locations from a list, including instructions to select all that apply or indicate if no options are correct. Finally, the
-		                      <code>&lt;OEQ&gt;</code> (Open-Ended Question) templates, split into Type A and Type B, establish a persona for a DeepFake forensics
-		                      analyst, detailing strict guidelines for performing thorough artifact analysis, avoiding false positives, and adhering to a specific
-		                      output format.
-		                    </p>
-		                  </div>
-		                  <div class="benchmark-carousel benchmark-carousel-compact" id="benchmark-carousel" aria-label="Benchmark example carousel">
-		                    <div class="columns is-mobile is-vcentered benchmark-carousel-row">
-		                      <div class="column is-narrow benchmark-carousel-nav-col">
-		                        <button
-	                          class="button is-small is-rounded is-light benchmark-carousel-prev"
-	                          type="button"
-	                          aria-label="Previous image">
-	                          <span class="icon is-small">
-	                            <i class="fas fa-chevron-left"></i>
-	                          </span>
-	                        </button>
-	                      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-	                      <div class="column">
-	                        <div class="benchmark-carousel-viewport" tabindex="0">
-	                          <img
-	                            src="./static/images/template_bench.png"
-	                            alt="Benchmark template example"
-	                            class="benchmark-carousel-image"
-	                            loading="lazy"
-	                            decoding="async"
-	                            data-carousel-slide
-	                            data-title="Template Bench">
-	                          <img
-	                            src="./static/images/tfq_mcq.png"
-	                            alt="True/False and multiple-choice question example"
-	                            class="benchmark-carousel-image"
-	                            loading="lazy"
-	                            decoding="async"
-	                            data-carousel-slide
-	                            data-title="TFQ / MCQ"
-	                            hidden>
-	                          <img
-	                            src="./static/images/vis_oeq.png"
-	                            alt="Visual open-ended question example"
-	                            class="benchmark-carousel-image"
-	                            loading="lazy"
-	                            decoding="async"
-	                            data-carousel-slide
-	                            data-title="Vis / OEQ"
-	                            hidden>
-	                        </div>
-	                      </div>
+<section class="section" id="comparison">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline-align">
+          <h2 class="title is-3 section-title">Comparison</h2>
+          <hr class="section-title-rule" aria-hidden="true">
+          <div class="content has-text-justified">
+            <p>
+              We compare our proposed TriDF with existing benchmarks for DeepFake detection across several key dimensions.
+              Symbols denote: &spades; Accuracy (e.g., F1-score, AUC), &hearts; Similarity-based (e.g., ROUGE-L, CSS), &diams; LLM-as-a-judge (e.g., GPTScore), and &clubs; <em>Cover</em>.
+            </p>
+          </div>
+          <div class="figure-stack">
+            <div class="figure-block">
+              <div class="columns figure-row">
+                <div class="column">
+                  <figure class="image">
+                    <img src="./static/images/comparision.png" alt="TriDF comparison figure" class="paper-figure">
+                  </figure>
+                  <p class="has-text-centered is-size-7 figure-caption">Comparison with related settings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-	                      <div class="column is-narrow benchmark-carousel-nav-col">
-	                        <button
-	                          class="button is-small is-rounded is-light benchmark-carousel-next"
-	                          type="button"
-	                          aria-label="Next image">
-	                          <span class="icon is-small">
-	                            <i class="fas fa-chevron-right"></i>
-	                          </span>
-	                        </button>
-	                      </div>
-	                    </div>
-		                    <p class="has-text-centered is-size-7 figure-caption" data-carousel-caption>
-		                      Template Bench (1/3)
-		                    </p>
-		                  </div>
-		                </div>
-	              </div>
-	            </div>
-	          </div>
+<section class="section" id="template-examples">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="pipeline-align">
+          <h2 class="title is-3 section-title">Templates and Examples</h2>
+          <hr class="section-title-rule" aria-hidden="true">
+          <div class="content has-text-justified">
+            <p>
+              The figure outlines prompt templates for benchmark construction across three formats:
+            </p>
+            <ul>
+              <li>
+                <strong>True-False <code>&lt;TFQ&gt;</code></strong>: Verifies the presence, background, or location of specific artifacts.
+              </li>
+              <li>
+                <strong>Multiple-Choice <code>&lt;MCQ&gt;</code></strong>: Identifies artifacts from a list, includes a “none of the above” option and allows for multiple selections.
+              </li>
+              <li>
+                <strong>Open-Ended <code>&lt;OEQ&gt;</code></strong>: Defines a DeepFake forensics analyst persona (Type A &amp; B) with guidelines for analysis and output formatting.
+              </li>
+            </ul>
+          </div>
+          <div class="benchmark-carousel benchmark-carousel-compact" id="benchmark-carousel" aria-label="Benchmark example carousel">
+            <div class="columns is-mobile is-vcentered benchmark-carousel-row">
+              <div class="column is-narrow benchmark-carousel-nav-col">
+                <button
+                  class="button is-small is-rounded is-light benchmark-carousel-prev"
+                  type="button"
+                  aria-label="Previous image">
+                  <span class="icon is-small">
+                    <i class="fas fa-chevron-left"></i>
+                  </span>
+                </button>
+              </div>
+
+              <div class="column">
+                <div class="benchmark-carousel-viewport" tabindex="0">
+                  <img
+                    src="./static/images/template_bench.png"
+                    alt="Benchmark template example"
+                    class="benchmark-carousel-image"
+                    loading="lazy"
+                    decoding="async"
+                    data-carousel-slide
+                    data-title="Template Bench">
+                  <img
+                    src="./static/images/tfq_mcq.png"
+                    alt="True/False and multiple-choice question example"
+                    class="benchmark-carousel-image"
+                    loading="lazy"
+                    decoding="async"
+                    data-carousel-slide
+                    data-title="TFQ / MCQ"
+                    hidden>
+                  <img
+                    src="./static/images/vis_oeq.png"
+                    alt="Visual open-ended question example"
+                    class="benchmark-carousel-image"
+                    loading="lazy"
+                    decoding="async"
+                    data-carousel-slide
+                    data-title="Vis / OEQ"
+                    hidden>
+                </div>
+              </div>
+
+              <div class="column is-narrow benchmark-carousel-nav-col">
+                <button
+                  class="button is-small is-rounded is-light benchmark-carousel-next"
+                  type="button"
+                  aria-label="Next image">
+                  <span class="icon is-small">
+                    <i class="fas fa-chevron-right"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <p class="has-text-centered is-size-7 figure-caption" data-carousel-caption>
+              Template Bench (1/3)
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -398,7 +439,8 @@
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="pipeline-align">
-          <h2 class="title is-3">Evaluation</h2>
+          <h2 class="title is-3 section-title">Evaluation</h2>
+          <hr class="section-title-rule" aria-hidden="true">
 	            <div class="figure-stack">
 	              <div class="figure-block">
 		                <div class="columns is-vcentered figure-row evaluation-figure-row">
@@ -471,11 +513,12 @@
       <div class="column is-four-fifths">
         <div class="pipeline-align content">
           <div class="citation-header">
-            <h2 class="title">Citation</h2>
+            <h2 class="title section-title">Citation</h2>
             <button class="button is-small is-light" type="button" id="copy-bibtex" data-copy-target="bibtex">
               Copy
             </button>
           </div>
+          <hr class="section-title-rule" aria-hidden="true">
           <pre><code id="bibtex">@article{jiang2025tridf,
   title={TriDF: Evaluating Perception, Detection, and Hallucination for Interpretable DeepFake Detection},
   author={Jiang-Lin, Jian-Yu and Huang, Kang-Yang and Zou, Ling and Lo, Ling and Yang, Sheng-Ping and Tseng, Yu-Wen and Lin, Kun-Hsiang and Chen, Chia-Ling and Ta, Yu-Ting and Wang, Yan-Tsung and others},
