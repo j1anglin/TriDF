@@ -1,0 +1,22 @@
+torch
+transformers
+accelerate
+huggingface_hub
+Pillow
+numpy
+requests
+google-generativeai
+
+# optional: Qwen VL / Omni models
+qwen_vl_utils
+# qwen_omni_utils
+
+# optional: video input
+imageio[ffmpeg]
+
+# optional: audio input
+librosa
+soundfile
+
+# optional: faster attention (if supported by GPU)
+# flash_attn

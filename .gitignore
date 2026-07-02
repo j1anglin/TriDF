@@ -1,0 +1,15 @@
+# ignore data files
+1_DATA/
+2_GT_Final/
+models/
+
+# logs
+logs/
+runs/
+*.log
+
+# all pycache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
