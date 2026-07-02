@@ -1,8 +1,11 @@
-# MMBench Demo Page
+# TriDF Demo Page
 
-This repository contains a static demo page for a multimodal benchmark, adapted from the Nerfies
-website template. It includes a leaderboard, qualitative examples, dataset details, and a citation
-section. All content is pure HTML/CSS/vanilla JS and deployable on GitHub Pages.
+This repository contains the static demo page for **TriDF**, a benchmark for interpretable
+DeepFake detection across image, video, and audio. It includes a leaderboard, qualitative
+examples, dataset details, and a citation section. All content is pure HTML/CSS/vanilla JS and
+deployable on GitHub Pages.
+
+Paper: [arXiv:2512.10652](https://arxiv.org/abs/2512.10652)
 
 ## Local Preview
 
@@ -18,7 +21,7 @@ Then open `http://localhost:8000/` in your browser.
 
 1. Go to **Settings → Pages**.
 2. Select **Deploy from a branch**.
-3. Choose branch `main` and folder `/ (root)`.
+3. Choose branch `gh-pages` and folder `/ (root)`.
 4. Save and wait for the GitHub Pages URL to go live.
 
 The site works for both project pages (`https://username.github.io/repo/`) and user pages
