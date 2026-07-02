@@ -9,17 +9,6 @@ runner scripts. Task data, question files, and ground-truth artifact
 annotations are published separately as a HuggingFace dataset (see
 [Data](#data)); this repo does not contain any media files.
 
-## Citation
-
-```bibtex
-@inproceedings{jiang2025tridf, 
-  title={{TriDF}: Evaluating Perception, Detection, and Hallucination for Interpretable DeepFake Detection},
-  author={Jiang-Lin, Jian-Yu and Huang, Kang-Yang and Zou, Ling and Lo, Ling and Yang, Sheng-Ping and Tseng, Yu-Wen and Lin, Kun-Hsiang and Chen, Chia-Ling and Ta, Yu-Ting and Wang, Yan-Tsung and Chen, Po-Ching and Xie, Hongxia and Shuai, Hong-Han and Cheng, Wen-Huang},
-  booktitle={CVPR}, 
-  year={2026} 
-} 
-```
-
 ## Layout
 
 ```text
@@ -152,3 +141,14 @@ bash scripts/eval_perception_original.sh mc Qwen3-VL-8B-Instruct
 
 - Model weights are intentionally not included; set `OFFLINE=1` to use a local cache under `models/`.
 - Generated outputs under `runs/` are not pre-populated.
+
+## Citation
+
+```bibtex
+@inproceedings{jiang2025tridf, 
+  title={{TriDF}: Evaluating Perception, Detection, and Hallucination for Interpretable DeepFake Detection},
+  author={Jiang-Lin, Jian-Yu and Huang, Kang-Yang and Zou, Ling and Lo, Ling and Yang, Sheng-Ping and Tseng, Yu-Wen and Lin, Kun-Hsiang and Chen, Chia-Ling and Ta, Yu-Ting and Wang, Yan-Tsung and Chen, Po-Ching and Xie, Hongxia and Shuai, Hong-Han and Cheng, Wen-Huang},
+  booktitle={CVPR}, 
+  year={2026} 
+} 
+```
