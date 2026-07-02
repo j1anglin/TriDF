@@ -12,12 +12,12 @@ annotations are published separately as a HuggingFace dataset (see
 ## Citation
 
 ```bibtex
-@article{jiang2025tridf,
-  title={TriDF: Evaluating Perception, Detection, and Hallucination for Interpretable DeepFake Detection},
-  author={Jiang-Lin, Jian-Yu and Huang, Kang-Yang and Zou, Ling and Lo, Ling and Yang, Sheng-Ping and Tseng, Yu-Wen and Lin, Kun-Hsiang and Chen, Chia-Ling and Ta, Yu-Ting and Wang, Yan-Tsung and others},
-  journal={arXiv preprint arXiv:2512.10652},
-  year={2025}
-}
+@inproceedings{jiang2025tridf, 
+  title={{TriDF}: Evaluating Perception, Detection, and Hallucination for Interpretable DeepFake Detection},
+  author={Jiang-Lin, Jian-Yu and Huang, Kang-Yang and Zou, Ling and Lo, Ling and Yang, Sheng-Ping and Tseng, Yu-Wen and Lin, Kun-Hsiang and Chen, Chia-Ling and Ta, Yu-Ting and Wang, Yan-Tsung and Chen, Po-Ching and Xie, Hongxia and Shuai, Hong-Han and Cheng, Wen-Huang},
+  booktitle={CVPR}, 
+  year={2026} 
+} 
 ```
 
 ## Layout
